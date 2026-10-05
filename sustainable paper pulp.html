@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Farm Waste to Paper Pulp</title>
+<meta name="description" content="A practical, easy-to-understand guide to turning agricultural residue into sustainable paper pulp in India.">
+<style>
+:root{
+  --ink:#17352b; --muted:#5c6e67; --cream:#f6f3e9; --paper:#fffdf7;
+  --green:#2f6b4f; --green2:#8bbf7a; --lime:#dcecc8; --brown:#9a6b42;
+  --line:#dfe5dc; --shadow:0 18px 50px rgba(23,53,43,.10);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,253,247,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;letter-spacing:-.03em}.logo span{color:var(--green)}
+.navlinks{display:flex;gap:18px;font-size:.9rem;color:var(--muted);flex-wrap:wrap}
+.navlinks a:hover{color:var(--green)}
+.hero{max-width:1180px;margin:auto;padding:82px 22px 65px;display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+.kicker{display:inline-block;background:var(--lime);color:var(--green);padding:7px 12px;border-radius:999px;font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+h1{font-size:clamp(3rem,7vw,6.2rem);line-height:.94;letter-spacing:-.07em;margin:18px 0 25px}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.045em;margin:0 0 15px}
+h3{margin:0 0 8px;font-size:1.18rem}
+.lead{font-size:1.15rem;color:var(--muted);max-width:700px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 17px;border-radius:12px;font-weight:800;border:1px solid var(--green);display:inline-block}
+.btn.primary{background:var(--green);color:white}.btn.secondary{background:transparent;color:var(--green)}
+.hero-card{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-card:before{content:"";position:absolute;width:230px;height:230px;background:var(--lime);border-radius:50%;right:-80px;top:-80px}
+.big-stat{font-size:4.5rem;line-height:1;font-weight:900;letter-spacing:-.07em;position:relative}
+.stat-label{color:var(--muted);position:relative}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+.mini{padding:15px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.mini b{display:block;font-size:1.3rem}
+section{padding:78px 22px}
+.wrap{max-width:1180px;margin:auto}
+.section-head{max-width:760px;margin-bottom:35px}
+.section-head p{color:var(--muted)}
+.grid{display:grid;gap:18px}
+.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:0 8px 30px rgba(23,53,43,.05)}
+.icon{font-size:2rem;margin-bottom:10px}
+.dark{background:var(--ink);color:#f7fbf4}.dark .section-head p,.dark .muted{color:#b9c9c1}
+.dark .card{background:#20483b;border-color:#376052}
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.step{background:var(--paper);border:1px solid var(--line);padding:22px;border-radius:18px;position:relative}
+.num{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:15px}
+.arrow{position:absolute;right:-17px;top:40%;font-size:22px;color:var(--green);z-index:2}
+.crop{display:flex;flex-direction:column;min-height:250px}
+.crop .tag{margin-top:auto;display:inline-block;color:var(--green);font-weight:800;font-size:.86rem}
+.callout{background:var(--lime);border-radius:24px;padding:28px;margin-top:25px}
+table{width:100%;border-collapse:collapse;background:var(--paper);border-radius:18px;overflow:hidden}
+th,td{text-align:left;padding:15px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#e9f1df}
+.timeline{border-left:3px solid var(--green2);padding-left:25px}
+.timeline .item{margin:0 0 27px;position:relative}
+.timeline .item:before{content:"";position:absolute;width:12px;height:12px;background:var(--green);border-radius:50%;left:-33px;top:7px}
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.check{padding:15px 17px;background:var(--paper);border:1px solid var(--line);border-radius:14px}
+.check b{display:block}
+.warning{border-left:5px solid var(--brown);background:#fff7ed;padding:18px 20px;border-radius:12px}
+footer{padding:45px 22px;background:#10261f;color:#b9c9c1}.footerin{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+small{color:inherit}
+.reveal{opacity:0;transform:translateY(15px);transition:.6s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:55px}.grid3,.grid4{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr}.arrow{display:none}}
+@media(max-width:550px){.navlinks{display:none}.grid3,.grid4,.checklist,.mini-grid{grid-template-columns:1fr}section{padding:55px 17px}.hero{padding-left:17px;padding-right:17px}h1{font-size:3.5rem}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="navin">
+    <a class="logo" href="#top">Farm → <span>Pulp</span></a>
+    <div class="navlinks">
+      <a href="#why">Why it matters</a><a href="#process">Process</a><a href="#materials">Materials</a>
+      <a href="#work">Working with pulp</a><a href="#challenges">Challenges</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div>
+    <span class="kicker">A practical guide to agricultural-fibre pulp</span>
+    <h1>Waste from the field can become a material.</h1>
+    <p class="lead">Rice straw, wheat straw and sugarcane bagasse contain plant fibres that can be processed into paper pulp. This guide explains what happens, why it matters, what can go wrong, and what someone working in the pulp supply chain actually needs to know.</p>
+    <div class="hero-buttons">
+      <a class="btn primary" href="#process">See the process ↓</a>
+      <a class="btn secondary" href="#work">I'm working with pulp</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="big-stat">350–500M</div>
+    <p class="stat-label">tonnes of agricultural waste reported annually in India</p>
+    <div class="mini-grid">
+      <div class="mini"><b>Cellulose</b><span>Useful plant fibre</span></div>
+      <div class="mini"><b>Less burning</b><span>A possible alternative use</span></div>
+      <div class="mini"><b>Paper</b><span>Sheets, boards & packaging</span></div>
+      <div class="mini"><b>Moulding</b><span>Cups, plates & trays</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+<div class="wrap">
+  <div class="section-head">
+    <span class="kicker">Start here</span><h2>So… what exactly is the idea?</h2>
+    <p>Think of agricultural residue as a raw material that has been left in the wrong place. Instead of treating suitable surplus straw as something to burn or throw away, it can be collected and processed to recover useful cellulose fibres.</p>
+  </div>
+  <div class="grid grid3">
+    <article class="card reveal"><div class="icon">🌾</div><h3>1. Collect suitable residue</h3><p>Crop leftovers such as rice straw, wheat straw and bagasse are gathered, cleaned, dried and prepared.</p></article>
+    <article class="card reveal"><div class="icon">🧪</div><h3>2. Separate the fibres</h3><p>Pulping removes or breaks down lignin and other unwanted components so the useful cellulose fibres can be recovered.</p></article>
+    <article class="card reveal"><div class="icon">📦</div><h3>3. Turn pulp into products</h3><p>The pulp can become paper, cardboard, packaging, notebooks, food containers and moulded-fibre products.</p></article>
+  </div>
+  <div class="callout"><strong>The big picture:</strong> Farm residue → collection → pulp → paper/fibre products → economic value → recycling.</div>
+</div>
+</section>
+
+<section id="process" class="dark">
+<div class="wrap">
+  <div class="section-head"><span class="kicker">The factory view</span><h2>How agricultural residue becomes pulp</h2><p>Different mills use different technologies. The research describes this simplified workflow.</p></div>
+  <div class="process">
+    <div class="step reveal"><div class="num">1</div><h3>Collect</h3><p class="muted">Gather residue quickly after harvest. Keep it dry and free from soil and unwanted material.</p><span class="arrow">→</span></div>
+    <div class="step reveal"><div class="num">2</div><h3>Prepare</h3><p class="muted">Clean, dry, bale and cut the material into manageable, uniform pieces.</p><span class="arrow">→</span></div>
+    <div class="step reveal"><div class="num">3</div><h3>Pulp</h3><p class="muted">Separate useful cellulose from lignin and other components using suitable pulping chemistry.</p><span class="arrow">→</span></div>
+    <div class="step reveal"><div class="num">4</div><h3>Refine</h3><p class="muted">Process the fibres to achieve the characteristics needed for the final product.</p><span class="arrow">→</span></div>
+    <div class="step reveal"><div class="num">5</div><h3>Make</h3><p class="muted">Form sheets, boards or moulded products such as plates, cups and packaging.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="materials">
+<div class="wrap">
+  <div class="section-head"><span class="kicker">Know your feedstock</span><h2>Not all crop residue behaves the same.</h2><p>The source material affects processing, fibre quality, logistics and even whether it should be diverted from another use.</p></div>
+  <div class="grid grid3">
+    <article class="card crop reveal"><div class="icon">🌾</div><h3>Rice straw / paddy straw</h3><p>Widely available and strongly linked with stubble burning. Its silica content can cause processing and equipment problems, and its fibres can be shorter and more brittle.</p><span class="tag">Research notes: some products may use ~10–15% paddy-straw pulp in blends.</span></article>
+    <article class="card crop reveal"><div class="icon">🌾</div><h3>Wheat straw</h3><p>A commercially successful agricultural fibre source described in the research. But remember: wheat straw is also important livestock fodder, so surplus—not essential fodder—should be considered.</p><span class="tag">Prices can rise sharply during fodder shortages.</span></article>
+    <article class="card crop reveal"><div class="icon">🎋</div><h3>Sugarcane bagasse</h3><p>This is the fibrous material left after sugarcane juice is extracted. Because it is already produced at sugar-processing facilities, collection can be easier.</p><span class="tag">An existing industrial by-product with fibre value.</span></article>
+  </div>
+</div>
+</section>
+
+<section style="background:#e9f1df">
+<div class="wrap">
+  <div class="section-head"><span class="kicker">Processing chemistry</span><h2>Why lignin and silica matter</h2></div>
+  <div class="grid grid3">
+    <div class="card"><h3>Cellulose = the useful part</h3><p>Cellulose is the main plant fibre we want to recover for papermaking and fibre products.</p></div>
+    <div class="card"><h3>Lignin = the natural binder</h3><p>Lignin helps hold plant cells together. Pulping needs to break down or remove much of it to free the fibres.</p></div>
+    <div class="card"><h3>Silica = a special problem in rice straw</h3><p>Rice straw can contain substantial silica. The research notes that it can create equipment and chemical-recovery problems, which is why rice straw needs specialised processing.</p></div>
+  </div>
+  <div class="warning" style="margin-top:20px"><strong>Important:</strong> “Eco-friendly” does not mean “no chemicals.” The goal is to use cleaner processes, recover/recycle process materials where possible, reduce wastewater and control emissions. Actual plant operation must follow the mill’s validated process and safety procedures.</div>
+</div>
+</section>
+
+<section id="work">
+<div class="wrap">
+  <div class="section-head"><span class="kicker">For people who work with pulp</span><h2>A practical checklist</h2><p>If you are a farmer, aggregator, plant operator, buyer, product maker or logistics partner, these are the things worth paying attention to.</p></div>
+  <div class="checklist">
+    <div class="check reveal"><b>🌾 Feedstock quality</b> Check crop type, moisture, contamination and whether the residue has another essential use.</div>
+    <div class="check reveal"><b>📦 Baling & storage</b> Loose straw is bulky. Compression/baling makes transport much more practical. Protect stored material from weather.</div>
+    <div class="check reveal"><b>🚚 Transport distance</b> Raw straw is low-density, so moving it long distances can become expensive. Local processing can reduce this problem.</div>
+    <div class="check reveal"><b>⏱ Harvest timing</b> In northern India, the collection window can be very short. Collection has to be organised before the next crop is sown.</div>
+    <div class="check reveal"><b>🧵 Fibre quality</b> Test strength, fibre length and the required blend. One residue may be suitable for one product but not another.</div>
+    <div class="check reveal"><b>🧪 Process control</b> Follow the specific mill's chemistry, temperature, pressure, residence time and recovery procedures rather than assuming all pulp behaves identically.</div>
+    <div class="check reveal"><b>💧 Water & effluent</b> Cleaner and closed-loop processing can reduce environmental impact, but wastewater and chemical management still need proper controls.</div>
+    <div class="check reveal"><b>📋 Product specification</b> Define the final use first: writing paper, kraft board, food packaging, moulded fibre, etc. Then select and blend pulp accordingly.</div>
+  </div>
+</div>
+</section>
+
+<section id="economics" class="dark">
+<div class="wrap">
+  <div class="section-head"><span class="kicker">Business & operations</span><h2>Why location matters so much</h2><p class="muted">The research argues for processing close to agricultural areas instead of hauling large amounts of loose straw over long distances.</p></div>
+  <div class="grid grid4">
+    <div class="card reveal"><h3>Local hubs</h3><p class="muted">Collection centres near farming areas can compress, dry and store residue before processing.</p></div>
+    <div class="card reveal"><h3>Modular plants</h3><p class="muted">The research describes compact 2-tonnes-per-day units as a way to decentralise processing.</p></div>
+    <div class="card reveal"><h3>Farmer income</h3><p class="muted">Selling suitable surplus residue can turn a disposal problem into an additional revenue stream.</p></div>
+    <div class="card reveal"><h3>Downstream buyers</h3><p class="muted">Pulp sheets can move to paper mills or moulding factories to become finished products.</p></div>
+  </div>
+  <div class="callout" style="background:#315c4d;color:white">
+    <strong>Research example — rice straw:</strong> the supplied case study reports that 1 tonne of stubble can produce about 500 kg of pulp, which can then be used for products such as paper, cups and tableware.
+  </div>
+</div>
+</section>
+
+<section id="challenges">
+<div class="wrap">
+  <div class="section-head"><span class="kicker">Reality check</span><h2>This is promising — but it isn't magic.</h2><p>Turning crop residue into pulp has real operational barriers. A good system designs around them.</p></div>
+  <table>
+    <thead><tr><th>Challenge</th><th>Why it matters</th><th>Practical response</th></tr></thead>
+    <tbody>
+      <tr><td>Loose, bulky straw</td><td>Transport becomes expensive.</td><td>Bale/compress near the source.</td></tr>
+      <tr><td>Short harvest window</td><td>Residue has to be collected quickly.</td><td>Pre-plan farmers, equipment, labour and routes.</td></tr>
+      <tr><td>Seasonal supply</td><td>Large amounts arrive at harvest, then availability drops.</td><td>Dry, weather-protected storage and inventory planning.</td></tr>
+      <tr><td>Different fibre quality</td><td>Rice, wheat and bagasse do not produce identical fibres.</td><td>Test and blend fibres for the target product.</td></tr>
+      <tr><td>Competing uses</td><td>Some residue is valuable as fodder or fuel.</td><td>Use surplus material rather than diverting essential uses.</td></tr>
+      <tr><td>Distance from mills</td><td>Major paper mills may be far from farms.</td><td>Consider local processing hubs and dense pulp sheets.</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<section style="background:#e9f1df">
+<div class="wrap">
+  <div class="section-head"><span class="kicker">What can come out of the process?</span><h2>From fibre to everyday products</h2></div>
+  <div class="grid grid4">
+    <div class="card"><div class="icon">📄</div><h3>Paper</h3><p>Writing and printing paper, notebooks and books.</p></div>
+    <div class="card"><div class="icon">📦</div><h3>Board & packaging</h3><p>Cardboard, kraft boards and commercial packaging.</p></div>
+    <div class="card"><div class="icon">🥣</div><h3>Moulded fibre</h3><p>Plates, bowls, cups, trays and food containers.</p></div>
+    <div class="card"><div class="icon">🧻</div><h3>Other fibre goods</h3><p>Tissues, wipes and other products depending on the fibre specification.</p></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="section-head"><span class="kicker">The bigger system</span><h2>What a successful ecosystem looks like</h2></div>
+  <div class="timeline">
+    <div class="item"><h3>Farmers & FPOs</h3><p>Harvest, stack and bale suitable surplus residue instead of burning it.</p></div>
+    <div class="item"><h3>Collection hubs</h3><p>Aggregate, dry, store and prepare material close to farms.</p></div>
+    <div class="item"><h3>Pulping units</h3><p>Convert biomass into dense, usable pulp using controlled processing.</p></div>
+    <div class="item"><h3>Paper & moulding manufacturers</h3><p>Blend or process pulp into the specification required for the final product.</p></div>
+    <div class="item"><h3>Consumers & recyclers</h3><p>Use the products and return suitable fibre into the circular economy.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="dark">
+<div class="wrap">
+  <div class="section-head"><span class="kicker">India's opportunity</span><h2>Farm waste → sustainable pulp → useful products → economic value.</h2>
+  <p class="muted">The research concludes that the strongest opportunities come from using surplus residue, processing close to farms, improving baling and storage, using cleaner pulping technologies, blending agricultural fibres where needed, and creating incentives for farmers and rural enterprises.</p>
+  </div>
+  <div class="grid grid3">
+    <div class="card"><h3>🌱 Environmental</h3><p class="muted">Potentially less open-field burning, lower smoke and particulate pollution, and better use of biomass.</p></div>
+    <div class="card"><h3>💰 Economic</h3><p class="muted">New raw-material streams, farmer income opportunities and rural processing jobs.</p></div>
+    <div class="card"><h3>♻️ Circular</h3><p class="muted">A residue that was treated as waste can enter a value chain and eventually return to fibre-based products.</p></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="section-head">
+    <span class="kicker">Quick reference</span>
+    <h2>Key numbers from the research</h2>
+    <p>These figures are reported in the supplied research and should be treated as case-study/research values, not universal plant guarantees.</p>
+  </div>
+  <div class="grid grid4">
+    <div class="card"><h3>350–500M tonnes</h3><p>Reported annual agricultural waste in India.</p></div>
+    <div class="card"><h3>~500 kg</h3><p>Reported pulp output from 1 tonne of rice stubble in the Kriya Labs case study.</p></div>
+    <div class="card"><h3>2 TPD</h3><p>Example modular processing capacity described in the research.</p></div>
+    <div class="card"><h3>10–20 days</h3><p>Approximate short harvesting window described for parts of northern India.</p></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footerin">
+  <div><strong>FROM FARM WASTE TO SUSTAINABLE PAPER PULP</strong><br><small>An easy-to-use companion to the supplied research paper.</small></div>
+  <div><small>Built for learning, planning and practical understanding.</small></div>
+</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
